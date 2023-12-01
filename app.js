@@ -4,13 +4,11 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const verifyToken = require('./middleware/middleware'); // Importar el middleware verifyToken
 
-// Puerto de conexion
-const PORT = 80;
-
 // Parsear el contenido enviado
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ limit: '20mb' }));
+
 
 // Importa las rutas
 const r_parish = require("./routes/parish/parish");
@@ -42,6 +40,6 @@ app.use((err, req, res, next) => {
     res.status(500).json({ error: 'Error del servidor' });
   });
 
-app.listen(PORT, () => {
-  console.log(`Servidor Prendido en el puerto ${PORT}`);
+app.listen(80, () => {
+  console.log(`Servidor Prendido`);
 });
