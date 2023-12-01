@@ -47,3 +47,5 @@ http.listen(port, function () {
   console.log('\n');
   console.log(`>> Express listo y escuchando por el puerto ` + port);
 });
+
+module.exports = app;
