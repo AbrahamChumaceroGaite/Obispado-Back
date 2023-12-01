@@ -3,7 +3,7 @@ const mysqlPromise = require("mysql2/promise");
 require('dotenv').config();
 
 const connection = mysql.createConnection({
-  host: process.env.DB_HOSTCOOLIFYP,
+  host: process.env.DB_HOSTCOOLIFY,
   port: process.env.DB_PORTCOOLIFY,
   user: process.env.DB_USERCOOLIFY,
   password: process.env.DB_PASSWORDCOOLIFY,
