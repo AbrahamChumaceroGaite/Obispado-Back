@@ -29,9 +29,6 @@
     "nodemon": "^2.0.15",
     "web-push": "^3.6.6"
   },
-  "devDependencies": {
-    "pkg": "^5.8.1"
-  },
   "bin": {
     "ApiObispoExecutable": "./app.js"
   }
